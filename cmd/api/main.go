@@ -4,13 +4,13 @@ import (
 	"flag"
 	"fmt"
 
-	greet "github.com/valmikroy/go-random/greetings"
+	"github.com/valmikroy/go-random/service/echo"
 )
 
 func main() {
 	var port int
-	flag.IntVar(&port, "p", 8000, "Port number")
+	flag.IntVar(&port, "p", 9999, "Port number")
 	flag.Parse()
-	fmt.Printf("Connectin to port %d\n", port)
-	fmt.Printf(greet.Hello("Blah"))
+	fmt.Printf("Starting API at http://localhost:%d\n", port)
+	echo.Run(port)
 }
