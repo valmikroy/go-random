@@ -9,6 +9,8 @@ import (
 	"github.com/valmikroy/go-random/internal/interfaces"
 )
 
+// Reference https://github.com/PacktPublishing/Building-Modern-CLI-Applications-in-Go/tree/main/Chapter03/audiofile
+
 func main() {
 	client := &http.Client{}
 	cmds := []interfaces.Command{
